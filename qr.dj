@@ -1,0 +1,26 @@
+class Node {
+	int data;
+	Node next = null;
+	
+	nat setData(nat newData) { data=newData; }
+	nat setNext(Node newNode) { next = newNode; }
+}
+
+main {
+	Node List;
+	List = new Node();
+	
+	Node Curr;
+	
+	nat x = readNat();
+	if (!(x == 0)) {List.setData(x)); Curr = List; x = readNat();}
+	
+	while (!(x == 0)) {
+		Node newNode;
+		newNode = new Node();
+		newNode.setData(x);
+		Curr.setNext(newNode);
+		Curr = newNode;
+		x = readNat();
+	}
+}
